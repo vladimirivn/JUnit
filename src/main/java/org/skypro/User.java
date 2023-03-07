@@ -33,7 +33,8 @@ public class User {
     }
 
     public void setEmail(String email) {
-        if (email == null || email.isEmpty() || email.isBlank() || !email.matches(EMAIL_REGEX)) {
+//        if (email == null || email.isEmpty() || email.isBlank() || !email.matches(EMAIL_REGEX)) {
+        if (email == null || !email.matches(EMAIL_REGEX)) {
             throw new IllegalArgumentException();
         }
         this.email = email;
